@@ -1008,7 +1008,7 @@ int main(void* ds, int a, int b, uintptr_t c, uintptr_t d)
         n_shellcore_patches = 0;
 #else
         notify("your firmware is not supported (shellcore)");
-        return 1;
+        // return 1;
 #endif
     }
 #ifdef FIRMWARE_PORTING
