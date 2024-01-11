@@ -1,8 +1,6 @@
 name: Sync Fork
 
 on:
-  schedule:
-    - cron: '*/9 * * * *' # every 9 minutes
   workflow_dispatch: # manually triggerable
 
 permissions:
