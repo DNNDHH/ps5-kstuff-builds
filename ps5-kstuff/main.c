@@ -950,11 +950,11 @@ static struct parasite_desc* get_parasites(size_t* desc_size)
         *desc_size = sizeof(parasites_320);
         return (void*)&parasites_320;
     case 0x999:
-        *desc_size = sizeof(parasites_320);
-        return (void*)&parasites_320;
+        *desc_size = sizeof(parasites_999);
+        return (void*)&parasites_999;
     case 0x99999999:
-        *desc_size = sizeof(parasites_320);
-        return (void*)&parasites_320;
+        *desc_size = sizeof(parasites_99999999);
+        return (void*)&parasites_99999999;
     case 0x321:
         *desc_size = sizeof(parasites_321);
         return (void*)&parasites_321;
