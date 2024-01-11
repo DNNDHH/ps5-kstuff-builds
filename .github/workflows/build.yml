@@ -1,4 +1,4 @@
-name: Build and Release
+name: Build and Releas
 
 on:
   push:
@@ -57,7 +57,7 @@ jobs:
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
         asset_path: ./ps5-kstuff/payload.bin
-        asset_name: payload.bin
+        asset_name: kstuff-hen.bin
         asset_content_type: application/octet-stream
 
     - name: Upload ELF file
@@ -67,6 +67,6 @@ jobs:
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
         asset_path: ./ps5-kstuff/payload.elf
-        asset_name: payload.elf
+        asset_name: kstuff-hen.elf
         asset_content_type: application/octet-stream
 
