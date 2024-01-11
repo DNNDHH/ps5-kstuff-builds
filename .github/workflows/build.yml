@@ -59,3 +59,14 @@ jobs:
         asset_path: ./ps5-kstuff/payload.bin
         asset_name: payload.bin
         asset_content_type: application/octet-stream
+
+    - name: Upload ELF file
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: ./ps5-kstuff/payload.elf
+        asset_name: payload.elf
+        asset_content_type: application/octet-stream
+
