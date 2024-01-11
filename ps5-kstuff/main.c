@@ -627,16 +627,15 @@ static const struct shellcore_patch* get_shellcore_patches(size_t* n_patches)
     FW(300);
     FW(310);
     FW(320);
+    FW(999);
+    FW(99999999);
     FW(321);
     FW(400);
     FW(402);
     FW(403);
     FW(450);
     FW(451);
-    FW(999);
-    FW(99999999);
-        
-        
+  
     default:
         *n_patches = 1;
         return 0;
@@ -787,8 +786,6 @@ static struct PARASITES(12) parasites_99999999 = {
         /* unsorted parasites */
     }
 };
-
-
 
 static struct PARASITES(12) parasites_321 = {
     .lim_syscall = 3,
@@ -958,11 +955,6 @@ static struct parasite_desc* get_parasites(size_t* desc_size)
     case 0x99999999:
         *desc_size = sizeof(parasites_320);
         return (void*)&parasites_320;
-
-
-
-
-        
     case 0x321:
         *desc_size = sizeof(parasites_321);
         return (void*)&parasites_321;
