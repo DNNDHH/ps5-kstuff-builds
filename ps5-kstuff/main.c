@@ -989,7 +989,7 @@ int main(void* ds, int a, int b, uintptr_t c, uintptr_t d)
     {
 #ifndef FIRMWARE_PORTING
         notify("your firmware is not supported (prosper0gdb)");
-        return 1;
+        // return 1;
 #endif
     }
     size_t desc_size = 0;
@@ -997,7 +997,7 @@ int main(void* ds, int a, int b, uintptr_t c, uintptr_t d)
     if(!desc)
     {
         notify("your firmware is not supported (ps5-kstuff)");
-        return 1;
+        // return 1;
     }
     size_t n_shellcore_patches;
     uint64_t shellcore_eh_frame_offset = get_eh_frame_offset("/system/vsh/SceShellCore.elf");
