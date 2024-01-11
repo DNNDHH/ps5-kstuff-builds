@@ -443,12 +443,12 @@ static const struct shellcore_patch* get_shellcore_patches(size_t* n_patches)
     *n_patches = 1;
     return 0;
 #endif
-
 #define FW(x)\
-    case 0x ## x:\
+    case 0x ## x: {\
         *n_patches = sizeof(shellcore_patches_ ## x) / sizeof(*shellcore_patches_ ## x);\
         patches = shellcore_patches_ ## x;\
-        break
+        break; \
+    }
 
     int(*sceKernelGetProsperoSystemSwVersion)(uint32_t*) = dlsym((void*)0x2001, "sceKernelGetProsperoSystemSwVersion");
     uint32_t buf[10];
