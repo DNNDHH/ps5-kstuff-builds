@@ -1,4 +1,4 @@
-all: payload.bin payload-gdb.bin
+all: payload.bin payload-gdb.bin payload.elf payload-gdb.elf
 
 clean:
 	rm -f payload.elf payload.bin payload-gdb.elf payload-gdb.bin freebsd-loader kelf kelf.o structs.h structs.inc uelf/uelf uelf/uelf.bin uelf/crt.o
