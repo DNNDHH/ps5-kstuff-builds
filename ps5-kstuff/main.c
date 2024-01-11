@@ -443,10 +443,10 @@ static const struct shellcore_patch* get_shellcore_patches(size_t* n_patches)
     *n_patches = 1;
     return 0;
 #endif
-#define FW(x)\
-    case 0x ## x: {\
-        *n_patches = sizeof(shellcore_patches_ ## x) / sizeof(*shellcore_patches_ ## x);\
-        patches = shellcore_patches_ ## x;\
+#define FW(x) \
+    case 0x ## x: { \
+        *n_patches = sizeof(shellcore_patches_ ## x) / sizeof(*shellcore_patches_ ## x); \
+        patches = shellcore_patches_ ## x; \
         break; \
     }
 
