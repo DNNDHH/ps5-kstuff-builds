@@ -437,18 +437,18 @@ uint64_t get_eh_frame_offset(const char* path)
     return eh_frame;
 }
 
+static void get_patch_320(size_t* n_patches, struct shellcore_patch** patches) {
+    *n_patches = sizeof(shellcore_patches_320) / sizeof(*shellcore_patches_320);
+    *patches = shellcore_patches_320;
+}
+
 static const struct shellcore_patch* get_shellcore_patches(size_t* n_patches)
 {
 #ifdef FIRMWARE_PORTING
     *n_patches = 1;
     return 0;
 #endif
-#define FW(x) \
-    case 0x ## x: { \
-        *n_patches = sizeof(shellcore_patches_ ## x) / sizeof(*shellcore_patches_ ## x); \
-        patches = shellcore_patches_ ## x; \
-        break; \
-    }
+#define FW(x) get_patch_##x(n_patches, &patches)
 
     int(*sceKernelGetProsperoSystemSwVersion)(uint32_t*) = dlsym((void*)0x2001, "sceKernelGetProsperoSystemSwVersion");
     uint32_t buf[10];
@@ -467,6 +467,7 @@ static const struct shellcore_patch* get_shellcore_patches(size_t* n_patches)
     // 返回补丁数组
     return patches;
 }
+
 
 static void patch_shellcore(const struct shellcore_patch* patches, size_t n_patches, uint64_t eh_frame_offset)
 {
