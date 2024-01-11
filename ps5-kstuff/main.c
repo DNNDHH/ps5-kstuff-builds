@@ -370,40 +370,6 @@ struct shellcore_patch
     size_t sz;
 };
 
-static struct shellcore_patch shellcore_patches_300[] = {
-    {0x9d1cae, "\x52\xeb\x08\x66\x90", 5},
-    {0x9d1cb9, "\xe8\x02\xfc\xff\xff\x58\xc3", 7},
-    {0x9d18b1, "\x31\xc0\x50\xeb\xe3", 5},
-    {0x9d1899, "\xe8\x22\x00\x00\x00\x58\xc3", 7},
-    {0x4dcfb4, "\xeb\x04", 2},
-    {0x2569b1, "\xeb\x04", 2},
-    {0x25af5a, "\xeb\x04", 2},
-    {0x4fafca, "\x90\x90", 2},
-    {0x4e335d, "\x90\xe9", 2},
-    {0x4fbb63, "\xeb", 1},
-    {0x4ff329, "\xd0\x00\x00\x00", 4},
-    {0x1968c1, "\xe8\x4a\xde\x42\x00\x31\xc9\xff\xc1\xe9\x12\x01\x00\x00", 14},
-    {0x1969e1, "\x83\xf8\x02\x0f\x43\xc1\xe9\xff\xfb\xff\xff", 11},
-    {0x1965c9, "\xe9\xf3\x02\x00\x00", 5},
-};
-
-static struct shellcore_patch shellcore_patches_310[] = {
-    {0x9d1cee, "\x52\xeb\x08\x66\x90", 5},
-    {0x9d1cf9, "\xe8\x02\xfc\xff\xff\x58\xc3", 7},
-    {0x9d18f1, "\x31\xc0\x50\xeb\xe3", 5},
-    {0x9d18d9, "\xe8\x22\x00\x00\x00\x58\xc3", 7},
-    {0x4dcff4, "\xeb\x04", 2},
-    {0x2569f1, "\xeb\x04", 2},
-    {0x25af9a, "\xeb\x04", 2},
-    {0x4fb00a, "\x90\x90", 2},
-    {0x4e339d, "\x90\xe9", 2},
-    {0x4fbba3, "\xeb", 1},
-    {0x4ff369, "\xd0\x00\x00\x00", 4},
-    {0x1968c1, "\xe8\x8a\xde\x42\x00\x31\xc9\xff\xc1\xe9\x12\x01\x00\x00", 14},
-    {0x1969e1, "\x83\xf8\x02\x0f\x43\xc1\xe9\xff\xfb\xff\xff", 11},
-    {0x1965c9, "\xe9\xf3\x02\x00\x00", 5},
-};
-
 static struct shellcore_patch shellcore_patches_320[] = {
     {0x9d1f9e, "\x52\xeb\x08\x66\x90", 5},
     {0x9d1fa9, "\xe8\x02\xfc\xff\xff\x58\xc3", 7},
@@ -453,107 +419,6 @@ static struct shellcore_patch shellcore_patches_99999999[] = {
     {0x1968c1, "\xe8\x3a\xe1\x42\x00\x31\xc9\xff\xc1\xe9\x12\x01\x00\x00", 14},
     {0x1969e1, "\x83\xf8\x02\x0f\x43\xc1\xe9\xff\xfb\xff\xff", 11},
     {0x1965c9, "\xe9\xf3\x02\x00\x00", 5},
-};
-
-
-static struct shellcore_patch shellcore_patches_321[] = {
-    {0x9d1f9e, "\x52\xeb\x08\x66\x90", 5},
-    {0x9d1fa9, "\xe8\x02\xfc\xff\xff\x58\xc3", 7},
-    {0x9d1ba1, "\x31\xc0\x50\xeb\xe3", 5},
-    {0x9d1b89, "\xe8\x22\x00\x00\x00\x58\xc3", 7},
-    {0x4dd284, "\xeb\x04", 2},
-    {0x256aa1, "\xeb\x04", 2},
-    {0x25b04a, "\xeb\x04", 2},
-    {0x4fb29a, "\x90\x90", 2},
-    {0x4e362d, "\x90\xe9", 2},
-    {0x4fbe33, "\xeb", 1},
-    {0x4ff5f9, "\xd0\x00\x00\x00", 4},
-    {0x1968c1, "\xe8\x3a\xe1\x42\x00\x31\xc9\xff\xc1\xe9\x12\x01\x00\x00", 14},
-    {0x1969e1, "\x83\xf8\x02\x0f\x43\xc1\xe9\xff\xfb\xff\xff", 11},
-    {0x1965c9, "\xe9\xf3\x02\x00\x00", 5},
-};
-
-static struct shellcore_patch shellcore_patches_400[] = {
-    {0x974fee, "\x52\xeb\x08\x66\x90", 5},
-    {0x974ff9, "\xe8\xd2\xfb\xff\xff\x58\xc3", 7},
-    {0x974bc1, "\x31\xc0\x50\xeb\xe3", 5},
-    {0x974ba9, "\xe8\x22\x00\x00\x00\x58\xc3", 7},
-    {0x5307f9, "\xeb\x04", 2},
-    {0x26f35c, "\xeb\x04", 2},
-    {0x26f76c, "\xeb\x04", 2},
-    {0x54e1f0, "\xeb", 1},
-    {0x536e1d, "\x90\xe9", 2},
-    {0x54db8f, "\xeb", 1},
-    {0x55137a, "\xc8\x00\x00\x00", 4},
-    {0x1a12d1, "\xe8\xea\x88\x47\x00\x31\xc9\xff\xc1\xe9\xf4\x02\x00\x00", 14},
-    {0x1a15d3, "\x83\xf8\x02\x0f\x43\xc1\xe9\x29\xfa\xff\xff", 11},
-    {0x1a0fe5, "\xe9\xe7\x02\x00\x00", 5},
-};
-
-static struct shellcore_patch shellcore_patches_402[] = {
-    {0x974fee, "\x52\xeb\x08\x66\x90", 5},
-    {0x974ff9, "\xe8\xd2\xfb\xff\xff\x58\xc3", 7},
-    {0x974bc1, "\x31\xc0\x50\xeb\xe3", 5},
-    {0x974ba9, "\xe8\x22\x00\x00\x00\x58\xc3", 7},
-    {0x5307f9, "\xeb\x04", 2},
-    {0x26f35c, "\xeb\x04", 2},
-    {0x26f76c, "\xeb\x04", 2},
-    {0x54e1f0, "\xeb", 1},
-    {0x536e1d, "\x90\xe9", 2},
-    {0x54db8f, "\xeb", 1},
-    {0x55137a, "\xc8\x00\x00\x00", 4},
-    {0x1a12d1, "\xe8\xea\x88\x47\x00\x31\xc9\xff\xc1\xe9\xf4\x02\x00\x00", 14},
-    {0x1a15d3, "\x83\xf8\x02\x0f\x43\xc1\xe9\x29\xfa\xff\xff", 11},
-    {0x1a0fe5, "\xe9\xe7\x02\x00\x00", 5},
-};
-
-static struct shellcore_patch shellcore_patches_403[] = {
-    {0x974fee, "\x52\xeb\x08\x66\x90", 5}, //push rdx; jmp 0x974ff9; 2-byte nop
-    {0x974ff9, "\xe8\xd2\xfb\xff\xff\x58\xc3", 7}, //call 0x974bd0; pop rax; ret
-    {0x974bc1, "\x31\xc0\x50\xeb\xe3", 5}, //xor eax, eax; push rax; jmp 0x974ba9
-    {0x974ba9, "\xe8\x22\x00\x00\x00\x58\xc3", 7}, //call 0x974bd0; pop rax; ret
-    {0x5307f9, "\xeb\x04", 2}, //jmp 0x5307ff
-    {0x26f35c, "\xeb\x04", 2}, //jmp 0x26f362
-    {0x26f76c, "\xeb\x04", 2}, //jmp 0x26f772
-    {0x54e1f0, "\xeb", 1}, //jmp (destination unchanged)
-    {0x536e1d, "\x90\xe9", 2}, //nop; jmp (destination unchanged)
-    {0x54db8f, "\xeb", 1}, //jmp (destination unchanged)
-    {0x55137a, "\xc8\x00\x00\x00", 4}, //(jmp opcode unchanged) 0x551446
-    {0x1a12d1, "\xe8\xea\x88\x47\x00\x31\xc9\xff\xc1\xe9\xf4\x02\x00\x00", 14}, //call 0x619bc0; xor ecx, ecx; inc ecx; jmp 0x1a15d3
-    {0x1a15d3, "\x83\xf8\x02\x0f\x43\xc1\xe9\x29\xfa\xff\xff", 11}, //cmp eax, 2; cmovae eax, ecx; jmp 0x1a1007
-    {0x1a0fe5, "\xe9\xe7\x02\x00\x00", 5}, //jmp 0x1a12d1
-};
-
-static struct shellcore_patch shellcore_patches_450[] = {
-    {0x97595e, "\x52\xeb\x08\x66\x90", 5}, //push rdx; jmp 0x975969; 2-byte nop
-    {0x975969, "\xe8\xd2\xfb\xff\xff\x58\xc3", 7}, //call 0x975540; pop rax; ret
-    {0x975531, "\x31\xc0\x50\xeb\xe3", 5}, //xor eax, eax; push rax; jmp 0x975519
-    {0x975519, "\xe8\x22\x00\x00\x00\x58\xc3", 7}, //call 0x975540; pop rax; ret
-    {0x530f42, "\xeb\x04", 2}, //jmp 0x530f48
-    {0x26fa8c, "\xeb\x04", 2}, //jmp 0x26fa16
-    {0x54eb60, "\xeb", 1}, //jmp (destination unchanged)
-    {0x5376bd, "\x90\xe9", 2}, //nop; jmp (destination unchanged)
-    {0x54e4ff, "\xeb", 1}, //jmp (destination unchanged)
-    {0x551cea, "\xc8\x00\x00\x00", 4}, //(jmp opcode unchanged) 0x551db6
-    {0x1a12d1, "\xe8\xfa\x88\x47\x00\x31\xc9\xff\xc1\xe9\xf4\x02\x00\x00", 14}, //call 0x619bd0; xor ecx, ecx; inc ecx; jmp 0x1a15d3
-    {0x1a15d3, "\x83\xf8\x02\x0f\x43\xc1\xe9\x29\xfa\xff\xff", 11}, //cmp eax, 2; cmovae eax, ecx; jmp 0x1a1007
-    {0x1a0fe5, "\xe9\xe7\x02\x00\x00", 5}, //jmp 0x1a12d1
-};
-
-static struct shellcore_patch shellcore_patches_451[] = {
-    {0x97596e, "\x52\xeb\x08\x66\x90", 5}, //push rdx; jmp 0x975979; 2-byte nop
-    {0x975979, "\xe8\xd2\xfb\xff\xff\x58\xc3", 7}, //call 0x975550; pop rax; ret
-    {0x975541, "\x31\xc0\x50\xeb\xe3", 5}, //xor eax, eax; push rax; jmp 0x975529
-    {0x975529, "\xe8\x22\x00\x00\x00\x58\xc3", 7}, //call 0x975550; pop rax; ret
-    {0x530f52, "\xeb\x04", 2}, //jmp 0x530f58
-    {0x26fa8c, "\xeb\x04", 2}, //jmp 0x26fa16
-    {0x54eb70, "\xeb", 1}, //jmp (destination unchanged)
-    {0x5376cd, "\x90\xe9", 2}, //nop; jmp (destination unchanged)
-    {0x54e50f, "\xeb", 1}, //jmp (destination unchanged)
-    {0x551cfa, "\xc8\x00\x00\x00", 4}, //(jmp opcode unchanged) 0x551dc6
-    {0x1a12d1, "\xe8\x0a\x89\x47\x00\x31\xc9\xff\xc1\xe9\xf4\x02\x00\x00", 14}, //call 0x619be0; xor ecx, ecx; inc ecx; jmp 0x1a15d3
-    {0x1a15d3, "\x83\xf8\x02\x0f\x43\xc1\xe9\x29\xfa\xff\xff", 11}, //cmp eax, 2; cmovae eax, ecx; jmp 0x1a1007
-    {0x1a0fe5, "\xe9\xe7\x02\x00\x00", 5}, //jmp 0x1a12d1
 };
 
 extern char _start[];
@@ -624,18 +489,9 @@ static const struct shellcore_patch* get_shellcore_patches(size_t* n_patches)
     struct shellcore_patch* patches;
     switch(ver)
     {
-    FW(300);
-    FW(310);
     FW(320);
     FW(999);
     FW(99999999);
-    FW(321);
-    FW(400);
-    FW(402);
-    FW(403);
-    FW(450);
-    FW(451);
-  
     default:
         *n_patches = 1;
         return 0;
@@ -671,52 +527,6 @@ void patch_app_db(void);
 #ifdef FIRMWARE_PORTING
 static struct PARASITES(100) parasites_empty = {};
 #endif
-
-static struct PARASITES(12) parasites_300 = {
-    .lim_syscall = 3,
-    .lim_fself = 12,
-    .lim_total = 12,
-    .parasites = {
-        /* syscall parasites */
-        {-0x7e96ad, RDI},
-        {-0x38214c, RSI},
-        {-0x38210c, RSI},
-        /* fself parasites */
-        {-0x970280, RDI},
-        {-0x2c922a, RAX},
-        {-0x2c90f0, RAX},
-        {-0x2c8e0e, RAX},
-        {-0x2c8cc6, R10},
-        {-0x2c8b8d, RAX},
-        {-0x2c881e, RDX},
-        {-0x2c8812, RCX},
-        {-0x2c86a6, RAX},
-        /* unsorted parasites */
-    }
-};
-
-static struct PARASITES(12) parasites_310 = {
-    .lim_syscall = 3,
-    .lim_fself = 12,
-    .lim_total = 12,
-    .parasites = {
-        /* syscall parasites */
-        {-0x7e966d, RDI},
-        {-0x38210c, RSI},
-        {-0x3820cc, RSI},
-        /* fself parasites */
-        {-0x970280, RDI},
-        {-0x2c91ea, RAX},
-        {-0x2c90b0, RAX},
-        {-0x2c8dce, RAX},
-        {-0x2c8c86, R10},
-        {-0x2c8b4d, RAX},
-        {-0x2c87de, RDX},
-        {-0x2c87d2, RCX},
-        {-0x2c8666, RAX},
-        /* unsorted parasites */
-    }
-};
 
 static struct PARASITES(12) parasites_320 = {
     .lim_syscall = 3,
@@ -787,150 +597,6 @@ static struct PARASITES(12) parasites_99999999 = {
     }
 };
 
-static struct PARASITES(12) parasites_321 = {
-    .lim_syscall = 3,
-    .lim_fself = 12,
-    .lim_total = 12,
-    .parasites = {
-        /* syscall parasites */
-        {-0x7e931d, RDI},
-        {-0x381dbc, RSI},
-        {-0x381d7c, RSI},
-        /* fself parasites */
-        {-0x96ff40, RDI},
-        {-0x2c8e9a, RAX},
-        {-0x2c8d60, RAX},
-        {-0x2c8a7e, RAX},
-        {-0x2c8936, R10},
-        {-0x2c87fd, RAX},
-        {-0x2c848e, RDX},
-        {-0x2c8482, RCX},
-        {-0x2c8316, RAX},
-        /* unsorted parasites */
-    }
-};
-
-static struct PARASITES(12) parasites_400 = {
-    .lim_syscall = 3,
-    .lim_fself = 12,
-    .lim_total = 12,
-    .parasites = {
-        /* syscall parasites */
-        {-0x80284d, RDI},
-        {-0x388a8c, RSI},
-        {-0x388a4c, RSI},
-        /* fself parasites */
-        {-0x990b10, RDI},
-        {-0x2cd36a, RAX},
-        {-0x2cd230, RAX},
-        {-0x2ccf53, RAX},
-        {-0x2cce16, R10},
-        {-0x2cccdd, RAX},
-        {-0x2cc96e, RDX},
-        {-0x2cc962, RCX},
-        {-0x2cc7f6, RAX},
-        /* unsorted parasites */
-    }
-};
-
-static struct PARASITES(12) parasites_402 = {
-    .lim_syscall = 3,
-    .lim_fself = 12,
-    .lim_total = 12,
-    .parasites = {
-        /* syscall parasites */
-        {-0x80284d, RDI},
-        {-0x388a3c, RSI},
-        {-0x3889fc, RSI},
-        /* fself parasites */
-        {-0x990b10, RDI},
-        {-0x2cd31a, RAX},
-        {-0x2cd1e0, RAX},
-        {-0x2ccf03, RAX},
-        {-0x2ccdc6, R10},
-        {-0x2ccc8d, RAX},
-        {-0x2cc91e, RDX},
-        {-0x2cc912, RCX},
-        {-0x2cc7a6, RAX},
-        /* unsorted parasites */
-    }
-};
-
-static struct PARASITES(14) parasites_403 = {
-    .lim_syscall = 3,
-    .lim_fself = 12,
-    .lim_total = 14,
-    .parasites = {
-        /* syscall parasites */
-        {-0x80284d, RDI},
-        {-0x3889ac, RSI},
-        {-0x38896c, RSI},
-        /* fself parasites */
-        {-0x2cc716, RAX},
-        {-0x2cd28a, RAX},
-        {-0x2cd150, RAX},
-        {-0x2cce73, RAX},
-        {-0x2ccbfd, RAX},
-        {-0x2cc88e, RDX},
-        {-0x2cc882, RCX},
-        {-0x990b10, RDI},
-        {-0x2ccd36, R10},
-        /* unsorted parasites */
-        {-0x479a0e, RAX},
-        {-0x479a0e, R15},
-    }
-};
-
-static struct PARASITES(14) parasites_450 = {
-    .lim_syscall = 3,
-    .lim_fself = 12,
-    .lim_total = 14,
-    .parasites = {
-        /* syscall parasites */
-        {-0x80281d, RDI},
-        {-0x38885c, RSI},
-        {-0x38881c, RSI},
-        /* fself parasites */
-        {-0x2cc566, RAX},
-        {-0x2cd0da, RAX},
-        {-0x2ccfa0, RAX},
-        {-0x2cccc3, RAX},
-        {-0x2cca4d, RAX},
-        {-0x2cc6de, RDX},
-        {-0x2cc6d2, RCX},
-        {-0x990b10, RDI},
-        {-0x2ccb86, R10},
-        /* unsorted parasites */
-        {-0x4798de, RAX},
-        {-0x4798de, R15},
-    }
-};
-
-static struct PARASITES(14) parasites_451 = {
-    .lim_syscall = 3,
-    .lim_fself = 12,
-    .lim_total = 14,
-    .parasites = {
-        /* syscall parasites */
-        {-0x80281d, RDI},
-        {-0x3884bc, RSI},
-        {-0x38847c, RSI},
-        /* fself parasites */
-        {-0x2cc1c6, RAX},
-        {-0x2ccd3a, RAX},
-        {-0x2ccc00, RAX},
-        {-0x2cc923, RAX},
-        {-0x2cc6ad, RAX},
-        {-0x2cc33e, RDX},
-        {-0x2cc332, RCX},
-        {-0x990b10, RDI},
-        {-0x2cc7e6, R10},
-        /* unsorted parasites */
-        {-0x47953e, RAX},
-        {-0x47953e, R15},
-    }
-};
-
 static struct parasite_desc* get_parasites(size_t* desc_size)
 {
     int(*sceKernelGetProsperoSystemSwVersion)(uint32_t*) = dlsym((void*)0x2001, "sceKernelGetProsperoSystemSwVersion");
@@ -940,12 +606,6 @@ static struct parasite_desc* get_parasites(size_t* desc_size)
     switch(ver)
     {
 #ifndef FIRMWARE_PORTING
-    case 0x300:
-        *desc_size = sizeof(parasites_300);
-        return (void*)&parasites_300;
-    case 0x310:
-        *desc_size = sizeof(parasites_310);
-        return (void*)&parasites_310;
     case 0x320:
         *desc_size = sizeof(parasites_320);
         return (void*)&parasites_320;
@@ -955,24 +615,6 @@ static struct parasite_desc* get_parasites(size_t* desc_size)
     case 0x99999999:
         *desc_size = sizeof(parasites_99999999);
         return (void*)&parasites_99999999;
-    case 0x321:
-        *desc_size = sizeof(parasites_321);
-        return (void*)&parasites_321;
-    case 0x400:
-        *desc_size = sizeof(parasites_400);
-        return (void*)&parasites_400;
-    case 0x402:
-        *desc_size = sizeof(parasites_402);
-        return (void*)&parasites_402;
-    case 0x403:
-        *desc_size = sizeof(parasites_403);
-        return (void*)&parasites_403;
-    case 0x450:
-        *desc_size = sizeof(parasites_450);
-        return (void*)&parasites_450;
-    case 0x451:
-        *desc_size = sizeof(parasites_451);
-        return (void*)&parasites_451;
     default:
         return 0;
 #else
